@@ -426,4 +426,135 @@ body {
     font-family: "NewFont", "Microsoft YaHei", sans-serif;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);  /* 修改阴影使文字更清晰 */
     margin-right: 15px;
+}
+
+/* 修改侧边栏样式 */
+.sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;  /* 恢复到原始位置 */
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -2px 0 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+/* 当侧边栏激活时的样式 */
+.sidebar.active {
+    right: 0;
+    display: block;
+}
+
+.sidebar-content {
+    padding: 30px;                               /* 增加内边距 */
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-content h3 {
+    color: #1E90FF;                              /* 使用主题蓝色 */
+    font-size: 26px;                             /* 增大字号 */
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #87CEFA;
+    font-family: "YouSheTitleBlack", "Microsoft YaHei", sans-serif;
+}
+
+.sidebar-content h4 {
+    color: #333;
+    font-size: 20px;                             /* 增大字号 */
+    margin: 20px 0 12px;
+    font-family: "YouSheTitleBlack", "Microsoft YaHei", sans-serif;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar-content ul ul {
+    margin: 12px 0;
+}
+
+.sidebar-content ul ul li {
+    color: #666;
+    padding: 8px 0;
+    font-size: 16px;
+    transition: all 0.3s ease;                   /* 添加过渡效果 */
+    position: relative;                          /* 为hover效果准备 */
+    padding-left: 15px;                         /* 为图标留出空间 */
+}
+
+.sidebar-content ul ul li:before {
+    content: '•';                                /* 添加小圆点 */
+    position: absolute;
+    left: 0;
+    color: #87CEFA;
+}
+
+.sidebar-content ul ul li:hover {
+    color: #1E90FF;                              /* 悬停时变色 */
+    transform: translateX(5px);                   /* 悬停时右移 */
+}
+
+/* 修改按钮样式 */
+.sidebar-toggle {
+    position: fixed;
+    right: 15px;
+    top: 8px;  /* 调整到顶部 */
+    width: 45px;
+    height: 45px;
+    background-color: transparent;  /* 改为透明背景 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #999;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9998;
+}
+
+.sidebar-toggle:hover {
+    color: #666;
+    background-color: transparent;  /* 悬停时也保持透明 */
+}
+
+/* 移除滚动显示相关样式，固定位置 */
+.sidebar-toggle.show {
+    top: 8px;  /* 保持在顶部 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 260px;                            /* 手机版稍微窄一点 */
+        right: -260px;
+    }
+    
+    .sidebar-content {
+        padding: 20px;
+    }
+    
+    .sidebar-content h3 {
+        font-size: 22px;
+    }
+    
+    .sidebar-content h4 {
+        font-size: 18px;
+    }
+    
+    .sidebar-content ul ul li {
+        font-size: 14px;
+        padding: 6px 0 6px 12px;
+    }
+
+    .sidebar-toggle {
+        right: 10px;
+        top: 8px;  /* 手机版也固定在顶部 */
+    }
 } 
