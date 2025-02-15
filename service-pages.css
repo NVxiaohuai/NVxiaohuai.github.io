@@ -53,6 +53,8 @@ body {
     color: #333;
     margin-bottom: 10px;
     border-bottom: 2px solid #87CEFA;
+    font-family: "YouSheTitleBlack", "Microsoft YaHei", sans-serif;
+    font-size: 24px;
 }
 
 .block-content {
@@ -70,6 +72,7 @@ body {
     color: #666;
     line-height: 1.6;
     font-size: 16px;
+    font-family: "YouSheTitleBlack", "Microsoft YaHei", sans-serif;
 }
 
 /* 响应式设计 */
@@ -87,4 +90,20 @@ body {
         width: 100%;
         max-width: 300px;
     }
+}
+
+.block-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.block-link:hover {
+    transform: translateY(-5px);
+}
+
+@font-face {
+    font-family: 'YouSheTitleBlack';
+    src: url('./fonts/优设标题黑.ttf') format('truetype');
 } 

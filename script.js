@@ -5,9 +5,13 @@ const swiper = new Swiper('.swiper', {
         delay: 5000,
         disableOnInteraction: false,
     },
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 30,        // 旋转角度
+        stretch: 0,        // 拉伸程度
+        depth: 100,        // 深度
+        modifier: 1,       // 效果乘数
+        slideShadows: true // 开启阴影
     },
     pagination: {
         el: '.swiper-pagination',

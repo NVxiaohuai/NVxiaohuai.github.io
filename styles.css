@@ -174,7 +174,7 @@ body {
     }
 
     .profile-name {
-        font-size: 18px;
+        font-size: 24px;  /* 手机版也相应放大 */
     }
 }
 
@@ -420,10 +420,10 @@ body {
 }
 
 .profile-name {
-    color: #333;
-    font-size: 20px;
+    color: #ffffff;  /* 改为白色 */
+    font-size: 28px;
     font-weight: bold;
-    font-family: "NewFont", "Microsoft YaHei", sans-serif;  /* 使用新字体 */
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-    margin-right: 15px;  /* 添加右侧间距，使整体更加居中 */
+    font-family: "NewFont", "Microsoft YaHei", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);  /* 修改阴影使文字更清晰 */
+    margin-right: 15px;
 } 
