@@ -54,6 +54,6 @@ window.onclick = function(event) {
 }
 
 // QQ联系功能
-document.querySelector('.qq-section').addEventListener('click', function() {
+document.querySelector('.qq-link').addEventListener('click', function() {
     window.location.href = 'tencent://message/?uin=3382606608';
 }); 

@@ -8,25 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Swiper CSS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        @font-face {
+            font-family: 'YiQiFont';
+            src: url('./fonts/义启星空之翼.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'NewFont';  /* 为XIAOHUAI设置新字体 */
+            src: url('./fonts/四铭字体.ttf') format('truetype');
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 顶部社交账号区域 -->
+    <!-- 顶部区域 -->
     <header class="header">
         <div class="container">
             <div class="profile">
                 <div class="profile-left">
                     <img src="./xiaohuai.jpg" alt="个人头像" class="avatar">
-                    <div class="welcome-text">欢迎光临晓怀网页</div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-icon" id="wechat"><i class="fab fa-weixin"></i></a>
-                    <a href="#" class="social-icon" id="kuaishou"><span style="font-size: 14px;">快</span></a>
-                    <a href="mailto:3382606608@qq.com" class="social-icon"><i class="far fa-envelope"></i></a>
+                    <span class="profile-name">XIAOHUAI</span>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- 欢迎语区域 -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-text">欢迎光临晓怀的小窝</div>
+        </div>
+    </section>
 
     <!-- 照片轮播区域 -->
     <section class="slider-section">
@@ -64,15 +76,35 @@
         </div>
     </section>
 
-    <!-- 底部QQ区域 -->
-    <footer class="footer">
+    <!-- 关于我们区域 -->
+    <section class="about-section">
         <div class="container">
-            <div class="qq-section">
-                <i class="fab fa-qq"></i>
-                <span class="qq-text">添加晓怀的QQ：3382606608</span>
+            <h2 class="about-title">关于我们</h2>
+            <div class="about-content">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" id="wechat">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信：PXSHSHH</span>
+                        </a>
+                        <a href="#" class="social-icon" id="kuaishou">
+                            <img src="@ks.png" alt="快手" class="ks-icon">
+                            <span>快手：MemoryHuiYi_ing</span>
+                        </a>
+                        <a href="mailto:3382606608@qq.com" class="social-icon">
+                            <i class="far fa-envelope"></i>
+                            <span>邮箱：3382606608@qq.com</span>
+                        </a>
+                        <a href="javascript:void(0)" class="social-icon qq-link">
+                            <i class="fab fa-qq"></i>
+                            <span>QQ：3382606608</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
     <!-- 微信二维码弹窗 -->
     <div id="wechat-modal" class="modal">
